@@ -1,8 +1,17 @@
+using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using OnlineEdu.Business.Abstract;
+using OnlineEdu.Business.Concrete;
+using OnlineEdu.DataAccess.Abstract;
 using OnlineEdu.DataAccess.Context;
+using OnlineEdu.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly()); //AutoMapper'ý dahil ettik.
+builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>)); //DataAccess 
+builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>)); //Business
 
 builder.Services.AddDbContext<AppDbContext>(options => { 
 options.UseNpgsql(builder.Configuration.GetConnectionString("SqlConnection")); //AppDbContext'den Db Baðlantýsý saðlandý
