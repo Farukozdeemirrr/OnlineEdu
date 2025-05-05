@@ -5,11 +5,11 @@ using OnlineEdu.DataAccess.Context;
 
 namespace OnlineEdu.DataAccess.Repositories
 {   //.Net12 İle gelen primary constructor yerine genişletilebilirliği daha yüksek olan klasik constructor kullanıldı
-    internal class GenericRepositories<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IRepository<T> where T : class
     {
         private readonly AppDbContext _context;
 
-        public GenericRepositories(AppDbContext context)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
         }

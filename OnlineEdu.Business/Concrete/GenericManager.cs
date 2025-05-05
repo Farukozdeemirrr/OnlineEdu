@@ -16,10 +16,10 @@ namespace OnlineEdu.Business.Concrete
         {
             _repository = repository;
         }
+
         public T TAdd(T entity)
         {
-            return _repository.Add(entity);
-            
+            return _repository.Add(entity);        
         }
 
         public int TCount()
