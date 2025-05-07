@@ -42,7 +42,7 @@ namespace OnlineEdu.API.Controllers
         public IActionResult Create(CreateAboutDto createAboutDto) 
         {
             var newValue = _mapper.Map<About>(createAboutDto);
-            var about =_aboutService.TAdd(newValue);
+            _aboutService.TAdd(newValue);
             return Ok("Yeni hakkımızda alanı oluşturuldu");
         }
 
