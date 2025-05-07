@@ -43,7 +43,7 @@ namespace OnlineEdu.API.Controllers
         public IActionResult Create(CreateBannerDto createBannerDto)
         {
             var newValue = _mapper.Map<Banner>(createBannerDto);
-            var about = _bannerService.TAdd(newValue);
+            _bannerService.TAdd(newValue);
             return Ok("Yeni Afiş alanı oluşturuldu");
         }
 
