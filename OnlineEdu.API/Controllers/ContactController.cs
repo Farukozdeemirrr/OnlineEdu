@@ -12,11 +12,9 @@ namespace OnlineEdu.API.Controllers
     [ApiController]
     public class ContactController : ControllerBase
     {
-        public class BlogsController : ControllerBase
-        {
             private readonly IGenericService<Contact> _contactService;
             private readonly IMapper _mapper;
-            public BlogsController(IGenericService<Contact> contactService, IMapper mapper)
+            public ContactController(IGenericService<Contact> contactService, IMapper mapper)
             {
                 _contactService = contactService;
                 _mapper = mapper;
@@ -56,4 +54,5 @@ namespace OnlineEdu.API.Controllers
                 return Ok("Contact alanı güncellendi");
             }
         }
-}
+    }
+
