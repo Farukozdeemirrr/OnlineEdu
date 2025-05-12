@@ -1,0 +1,27 @@
+
+
+
+-----Admin-----
+
+-Dashboard sayfasý
+
+
+
+
+----Teacher---- 
+-dashboard tasarýmý 
+-profil bilgileri kýsmý 
+
+
+
+
+
+
+---Student--- 
+-dashboard tasarýmý yapýlacak
+-profil bilgileri sayfasý 
+
+
+
+
+
