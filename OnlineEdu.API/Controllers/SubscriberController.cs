@@ -41,9 +41,9 @@ namespace OnlineEdu.API.Controllers
                 return Ok("Abone alanı silindi");
             }
             [HttpPost]
-            public IActionResult Create(CreateSocialMediaDto createubscriberDto)
+            public IActionResult Create(CreateSocialMediaDto createSubscriberDto)
             {
-                var newValue = _mapper.Map<Subscriber>(createubscriberDto);
+                var newValue = _mapper.Map<Subscriber>(createSubscriberDto);
                 _subscriberService.TAdd(newValue);
                 return Ok("Abone alanı oluşturuldu");
             }
